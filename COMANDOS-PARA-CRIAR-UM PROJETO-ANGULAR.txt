@@ -1,0 +1,25 @@
+COMANDOS PARA CRIAR UM PROJETO ANGULAR
+
+  CRIANDO O PROJETO
+  501  ng new productsapp
+
+  ACESSANDO A PASTA DO PROJETO
+  503  cd productsapp/
+
+  ADICIONANDO O ANGULAR MATERIAL
+  505  ng add @angular/material
+
+  INSTALANDO O FLEX LAYOUT
+  506  npm install --save @angular/flex-layout
+
+  CRIANDO UM COMPONENTE
+  508  ng g c Product -m app
+  509  ng g c Department -m app
+
+  CRIANDO UM SERVICO
+  510  ng g s service/Product
+  511  ng g s service/Department
+
+  CRIANDO UMA INTERFACE
+  512  ng g i service/Department
+  513  ng g i service/Product
