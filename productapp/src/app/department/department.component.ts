@@ -81,6 +81,7 @@ export class DepartmentComponent implements OnInit {
   }
 
   ngOnDestroy() {
+    //para dar um subscribe 
     this.unsubscribe$.next();
   }
 }
