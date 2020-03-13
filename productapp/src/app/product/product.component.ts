@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ProductService } from '../product.service';
 import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
-import { Product } from '../product';
-import { DepartmentService } from '../department.service';
-import { Department } from '../department';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material';
+import { Product } from '../service/product';
+import { Department } from '../service/department';
+import { ProductService } from '../service/product.service';
+import { DepartmentService } from '../service/department.service';
 
 @Component({
   selector: 'app-product',

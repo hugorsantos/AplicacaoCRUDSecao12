@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Department } from '../department';
-import { DepartmentService } from '../department.service';
-import { MatSnackBar } from '@angular/material';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { Department } from '../service/department';
+import { DepartmentService } from '../service/department.service';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-department',
