@@ -23,3 +23,20 @@ COMANDOS PARA CRIAR UM PROJETO ANGULAR
   CRIANDO UMA INTERFACE
   512  ng g i service/Department
   513  ng g i service/Product
+
+  
+  ATUALIZANDO O PROJETO
+	Primeiro atualiza o angular
+	ng update --next @angular/cli --force
+
+	Antes de instalar o flex layout verifique se o projeto roda.
+	npm install --save @angular/flex-layout
+
+	Atualiza o Typescript
+	npm install typescript@latest
+
+	Rode o projeto caso de erro execute o comando abaixo
+	ERROR in The Angular Compiler requires TypeScript >=3.6.4 and <3.8.0 but 3.8.3 was found instead.
+	$ npm install typescript@3.7.5 --save
+
+	Rode novamente o projeto Angular.
