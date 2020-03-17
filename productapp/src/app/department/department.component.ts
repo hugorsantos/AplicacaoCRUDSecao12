@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+<<<<<<< Updated upstream
 import { Department } from '../service/department';
 import { DepartmentService } from '../service/department.service';
 import { MatSnackBar } from '@angular/material';
+=======
+import { DepartmentService } from '../service/department.service';
+import { Department } from '../service/department';
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'app-department',
@@ -81,7 +86,7 @@ export class DepartmentComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    //para dar um subscribe 
+    //para dar um subscribe
     this.unsubscribe$.next();
   }
 }
