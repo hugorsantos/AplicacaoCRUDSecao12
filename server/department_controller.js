@@ -28,7 +28,7 @@ router.delete('/:id', async (req, res) => {
         let prods = await Product.find({departments: id}).exec();
         if (prods.length > 0) {
             res.status(500).send({
-                msg: 'Could not remove this department. You may have to fix its dependencies before.'
+                msg: 'Não foi possível remover este departamento. Talvez você precise corrigir suas dependências antes.'
             })
         }
         else {
@@ -37,7 +37,7 @@ router.delete('/:id', async (req, res) => {
         }
     }
     catch(err) {
-        res.status(500).send({msg: "Internal error.", error: err})
+        res.status(500).send({msg: "Erro interno.", error: err})
     }
 })
 

@@ -37,7 +37,6 @@ export class ProductService {
         tap((products) => console.log(products))
       )
       .subscribe(this.productsSubject$);
-
       this.loaded = true;
     }
     return this.productsSubject$.asObservable();

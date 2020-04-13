@@ -45,9 +45,7 @@ export class DepartmentComponent implements OnInit {
       this.departmentService.add({name: this.depName})
       .subscribe(
         (dep) => {
-          console.log(dep);
-
-          this.notify('Inserted!');
+          this.notify('Inserido!');
         },
         (err) => console.error(err))
     }
@@ -77,6 +75,7 @@ export class DepartmentComponent implements OnInit {
   }
 
   notify(msg: string) {
+    console.log(msg);
     this.snackBar.open(msg, "OK", {duration: 3000});
   }
 

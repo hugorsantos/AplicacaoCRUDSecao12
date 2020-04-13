@@ -49,7 +49,7 @@ export class ProductComponent implements OnInit {
     this.unsubscribe$.next();
   }
 
-  save(){
+  save() {
     let data = this.productForm.value;
     if (data._id != null) {
       this.productService.update(data)
