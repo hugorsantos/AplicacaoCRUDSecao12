@@ -54,10 +54,9 @@ export class ProductComponent implements OnInit {
     if (data._id != null) {
       this.productService.update(data)
         .subscribe(
-          (p)=> this.notify("Updated!")
+          (p) => this.notify("Updated!")
         );
-    }
-    else {
+    } else {
       this.productService.add(data)
         .subscribe(
           (p) => this.notify("Inserted!!")
@@ -71,7 +70,7 @@ export class ProductComponent implements OnInit {
       .subscribe(
         () => this.notify("Deleted!"),
         (err) => console.log(err)
-      )
+      );
   }
 
   edit(p: Product) {

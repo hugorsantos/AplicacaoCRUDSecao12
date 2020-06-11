@@ -19,7 +19,7 @@ export class DepartmentService {
   get(): Observable<Department[]> {
     if (!this.loaded) {
       this.http.get<Department[]>(this.url)
-        .pipe( 
+        .pipe(
           tap((deps) => console.log(deps)),
           delay(1000)
         )
@@ -33,19 +33,20 @@ export class DepartmentService {
     return this.http.post<Department>(this.url, d)
     .pipe(
       tap((dep: Department) => this.departmentsSubject$.getValue().push(dep))
-    )
+    );
   }
 
   del(dep: Department): Observable<any> {
     return this.http.delete(`${this.url}/${dep._id}`)
-      .pipe( 
-        tap(()=> {
+      .pipe(
+        tap(() => {
           let departments = this.departmentsSubject$.getValue();
           let i = departments.findIndex(d => d._id === dep._id);
-          if (i>=0)
+          if (i >= 0) {
             departments.splice(i,1);
+          }
         }
-      ))
+      ));
   }
 
   update(dep: Department): Observable<Department> {
@@ -54,9 +55,10 @@ export class DepartmentService {
         tap((d) => {
           let departments = this.departmentsSubject$.getValue();
           let i = departments.findIndex(d => d._id === dep._id);
-          if (i>=0)
+          if (i >= 0) {
             departments[i].name = d.name;
+          }
         })
-      )
+      );
   }
 }
